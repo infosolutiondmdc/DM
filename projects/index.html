@@ -45,49 +45,60 @@
       <section class="page-header">
         <div class="container">
           <h1><i class="fas fa-trophy"></i> Recent & Past Projects</h1>
-          <p>Delivering engineering excellence across the Philippines</p>
+          <p>Click on any project for more details</p>
         </div>
       </section>
 
       <section class="projects-page">
         <div class="container">
           <div class="projects-grid">
-            <div class="project-card">
+            <!-- Project 1: 50m Special Box Culvert -->
+            <div class="project-card" onclick="openProjectModal('culvert')">
               <div class="project-icon"><i class="fas fa-water"></i></div>
               <div class="project-info">
                 <h3>50m Special Box Culvert</h3>
                 <p>Alaminos, Laguna</p>
               </div>
             </div>
-            <div class="project-card">
+
+            <!-- Project 2: 4-Storey Commercial Building (Valenzuela) -->
+            <div class="project-card" onclick="openProjectModal('commercial4')">
               <div class="project-icon"><i class="fas fa-building"></i></div>
               <div class="project-info">
                 <h3>4-Storey Commercial Building</h3>
                 <p>400 sqm TFA | Valenzuela City</p>
               </div>
             </div>
-            <div class="project-card">
+
+            <!-- Project 3: Parks & Roads Development -->
+            <div class="project-card" onclick="openProjectModal('parks')">
               <div class="project-icon"><i class="fas fa-tree"></i></div>
               <div class="project-info">
                 <h3>Parks & Roads Development</h3>
                 <p>2 hectares total | Bulacan</p>
               </div>
             </div>
-            <div class="project-card">
+
+            <!-- Project 4: 2-Storey Commercial Building (Alaminos) -->
+            <div class="project-card" onclick="openProjectModal('commercial2')">
               <div class="project-icon"><i class="fas fa-store"></i></div>
               <div class="project-info">
                 <h3>2-Storey Commercial Building</h3>
                 <p>1000 sqm TFA | Alaminos, Laguna</p>
               </div>
             </div>
-            <div class="project-card">
+
+            <!-- Project 5: Big Fan Steel Connection -->
+            <div class="project-card" onclick="openProjectModal('fan')">
               <div class="project-icon"><i class="fas fa-industry"></i></div>
               <div class="project-info">
                 <h3>Big Fan Steel Connection</h3>
                 <p>Fan Cage Structure | Mall of Asia</p>
               </div>
             </div>
-            <div class="project-card">
+
+            <!-- Project 6: 3-Storey Townhouse Design -->
+            <div class="project-card" onclick="openProjectModal('townhouse')">
               <div class="project-icon"><i class="fas fa-home"></i></div>
               <div class="project-info">
                 <h3>3-Storey Townhouse Design</h3>
@@ -101,13 +112,23 @@
 
     <footer>
       <div class="container">
-        <p>© 2023 Structural Design & Services | Quezon City, Philippines</p>
+        <p>© 2026 Structural Design & Services | Quezon City, Philippines</p>
         <p>
           <i class="fas fa-chart-line"></i> Structural Engineering · Cost
           Intelligence · Sustainable Design
         </p>
       </div>
     </footer>
+
+    <!-- Project Modal Popup -->
+    <div id="projectModal" class="modal">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <div id="modal-body">
+          <!-- Dynamic content will be inserted here -->
+        </div>
+      </div>
+    </div>
 
     <script src="/DM/script.js"></script>
   </body>
