@@ -509,7 +509,7 @@ textarea:focus {
   color: #4a627a;
 }
 
-/* Modal Popup Styles - Improved Larger Version */
+/* Modal Popup Styles - LARGE VERSION */
 .modal {
   display: none;
   position: fixed;
@@ -535,11 +535,12 @@ textarea:focus {
 .modal-content {
   background-color: #ffffff;
   position: relative;
-  margin: 3% auto;
+  margin: 5% auto;
   padding: 0;
   width: 90%;
-  max-width: 850px; /* Changed from 700px to 850px - wider */
-  max-height: 90vh; /* Changed from 85vh to 90vh - taller */
+  max-width: 800px;
+  min-width: 320px;
+  max-height: 85vh;
   border-radius: 28px;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
   animation: slideUp 0.3s ease;
@@ -565,13 +566,13 @@ textarea:focus {
   position: absolute;
   right: 20px;
   top: 15px;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
   cursor: pointer;
   transition: color 0.2s ease;
   z-index: 10;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -697,11 +698,27 @@ textarea:focus {
   box-shadow: 0 8px 20px rgba(227, 108, 74, 0.3);
 }
 
+/* Desktop Large Screens (1200px+) */
+@media (min-width: 1200px) {
+  .modal-content {
+    max-width: 900px;
+  }
+}
+
+/* Tablet (768px - 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .modal-content {
+    max-width: 700px;
+  }
+}
+
+/* Mobile (640px and below) */
 @media (max-width: 640px) {
   .modal-content {
-    margin: 10% auto;
+    margin: 15% auto;
     width: 92%;
-    max-height: 80vh;
+    max-width: 92%;
+    max-height: 75vh;
   }
 
   .modal-project-title {
@@ -735,6 +752,42 @@ textarea:focus {
 .modal-btn:hover {
   background: #c55a3a;
   transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(227, 108, 74, 0.3);
+}
+
+@media (max-width: 640px) {
+  .modal-content {
+    margin: 10% auto;
+    width: 92%;
+    max-height: 80vh;
+  }
+
+  .modal-project-title {
+    font-size: 1.4rem;
+  }
+
+  #modal-body {
+    padding: 24px 20px 32px 20px;
+  }
+
+  .modal-project-icon i {
+    font-size: 3rem;
+    padding: 18px;
+  }
+
+  .modal-project-details {
+    padding: 16px 18px;
+  }
+
+  .modal-project-details ul {
+    margin-left: 18px;
+    font-size: 0.85rem;
+  }
+
+  .modal-btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 640px) {
