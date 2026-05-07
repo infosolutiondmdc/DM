@@ -89,12 +89,13 @@ main {
 .logo-img {
   height: 50px;
   width: auto;
-  transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  transition: all 0.3s ease;
   border-radius: 12px;
+  cursor: pointer;
 }
 
 .logo-img:hover {
-  transform: scale(1.08) rotate(2deg);
+  filter: drop-shadow(0 0 8px rgba(227, 108, 74, 0.6));
 }
 
 .logo h1 {
